@@ -106,7 +106,7 @@
                 {{-- Users --}}
                 @can('user_read')
                     <li class=" nav-item" aria-haspopup="true">
-                        <a class="d-flex align-items-center @if(request()->route()->action['as'] == 'users') active @endif" href="{{route('users.index')}}"><i data-feather="users"></i><span class="menu-title text-truncate" data-i18n="Home">Users</span></a>
+                        <a class="d-flex align-items-center @if( request()->route()->action['as'] == 'users.index' || request()->route()->action['as'] == 'users.create' || request()->route()->action['as'] == 'users.edit' || request()->route()->action['as'] == 'users.show' ) active @endif" href="{{route('users.index')}}"><i data-feather="users"></i><span class="menu-title text-truncate" data-i18n="Home">Users</span></a>
                     </li>
                 @endcan
             </ul>
