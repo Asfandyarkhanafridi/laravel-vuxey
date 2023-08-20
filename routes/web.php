@@ -28,7 +28,7 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
 
 //Dashboard
-    Route::get('/dashboard', [HomeController::class, 'index'])->name('home');
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Setting
     Route::resource('settings', SettingController::class)->only('edit','update');
